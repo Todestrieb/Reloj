@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+
+
+namespace Cronometro
+{
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+
+            Int16 horaCronometro, minutoCronometro, segundoCronometro;
+            
+            Console.WriteLine("Menú:   1-)Reloj   2-)Cronómetro");
+            string s = Console.ReadLine();
+            int opc = int.Parse(s); 
+
+           switch(opc){
+           
+               case 1:
+                   
+                   Console.Clear();
+                   Console.WriteLine(DateTime.Now);
+                   Thread.Sleep(1000);
+                  break;
+           
+               case 2:
+                   
+                   Console.Clear();
+
+for (horaCronometro = 0; horaCronometro < 1000; horaCronometro++)  { 
+    for (minutoCronometro = 0; minutoCronometro < 60; minutoCronometro++)  { 
+        for (segundoCronometro = 0; segundoCronometro < 60; segundoCronometro++)  { 
+            Console.WriteLine(horaCronometro.ToString("00") + "." + minutoCronometro.ToString("00") + "." + segundoCronometro.ToString("00")); System.Threading.Thread.Sleep(1000); 
+    Console.Clear(); } } }
+
+break;
+
+
+           
+           
+           }
+           Console.ReadKey();
+            }
+         
+    
+
+
+}
+    }
+    
+
+
+
